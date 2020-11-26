@@ -14,6 +14,13 @@ uint8_t rx_buf[RX_MAX];	 //串口3接收数据存储
 uint8_t rx_flag = 0;		 //当一帧数据接收完成之后置1
 
 
+//重定义printf函数
+int __io_putchar(int ch)
+{
+	HAL_UART_Transmit(&UartHandle, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
+	return ch;
+}
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) //接收完成回调函数
 {
 
