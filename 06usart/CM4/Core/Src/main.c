@@ -101,7 +101,7 @@ int main(void)
   Main_Config();
 
 
-  Usart_SendString("--------野火stm32mp157 Cortex-M4内核串口实验----------\n");
+  printf("--------野火stm32mp157 Cortex-M4内核串口实验----------\n");
   //Usart_SendString( (uint8_t *) "stm32mp157 usart test \r\n");
 
   while (1)

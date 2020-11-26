@@ -24,7 +24,7 @@ void Main_Task(void)        //主要的任务函数
 
 	if(rx_flag == 1)
 	{
-		Usart_SendString(rx_buf);
+		printf((char *)rx_buf);
 		//HAL_UART_Transmit_IT(&UartHandle, rx_buf, strlen((char *)rx_buf));
 		rx_flag = 0;
 	}
