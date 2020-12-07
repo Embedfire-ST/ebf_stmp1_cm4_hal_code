@@ -1,0 +1,4 @@
+MANIFEST_VERSION = openstlinux-5.4-dunfell-mp1-20-11-12
+KERNEL_DT = ./DeviceTree/I2C_MPU6050/kernel
+UBOOT_DT = ./DeviceTree/I2C_MPU6050/u-boot
+TFA_DT = ./DeviceTree/I2C_MPU6050/tf-a
