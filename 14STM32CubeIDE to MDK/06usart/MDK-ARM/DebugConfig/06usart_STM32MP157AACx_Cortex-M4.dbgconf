@@ -1,0 +1,63 @@
+// <<< Use Configuration Wizard in Context Menu >>>
+
+// <h> Production mode
+//   <i> Configuration of remoteproc scripts automation
+//   <o.2>  Restart                  <i> Restart remoteproc when resetting M4 application
+//   <o.1>  Stop and Remove          <i> Stop and remove M4 application when disconnecting the debugger
+//   <o.0>  Load and Run             <i> Load M4 application when connecting the debugger
+// </h>
+Production_Options = 0x00000000;
+
+// <q> Force M4 Start
+// <i> Start M4 and leave it running on an endless loop
+Force_M4_Start = 0x00000000;
+
+// <h> Debug MCU configuration register (DBGMCU_CR)
+//   <o.2>  DBG_STANDBY              <i> Debug Standby Mode
+//   <o.1>  DBG_STOP                 <i> Debug Stop Mode
+//   <o.0>  DBG_SLEEP                <i> Debug Sleep Mode
+// </h>
+DbgMCU_CR = 0x00000007;
+
+// <h> TPIU Pin Routing
+//   <o0> TRACECLK
+//     <i> ETM Trace Clock
+//       <0x00020003=> Pin PC3
+//       <0x0002000C=> Pin PC12
+//       <0x0004000C=> Pin PE12
+//       <0x0008000E=> Pin PI14
+//   <o1> TRACED0
+//     <i> ETM Trace Data 0
+//       <0x00020001=> Pin PC1
+//       <0x00020008=> Pin PC8
+//       <0x00040003=> Pin PE3
+//       <0x00060000=> Pin PG0
+//       <0x0006000D=> Pin PG13
+//       <0x0008000C=> Pin PI12
+//   <o2> TRACED1
+//     <i> ETM Trace Data 1
+//       <0x00020009=> Pin PC9
+//       <0x00040004=> Pin PE4
+//       <0x00060001=> Pin PG1
+//       <0x0006000E=> Pin PG14
+//       <0x0008000D=> Pin PI13
+//   <o3> TRACED2
+//     <i> ETM Trace Data 2
+//       <0x0002000A=> Pin PC10
+//       <0x00040006=> Pin PE6
+//       <0x00060002=> Pin PG2
+//       <0x00090005=> Pin PJ5
+//   <o4> TRACED3
+//     <i> ETM Trace Data 3
+//       <0x0002000B=> Pin PC11
+//       <0x00040005=> Pin PE5
+//       <0x00060003=> Pin PG3
+//       <0x00090006=> Pin PJ6
+// </h>
+TraceClk_Pin = 0x0008000E;
+TraceD0_Pin  = 0x0008000C;
+TraceD1_Pin  = 0x0008000D;
+TraceD2_Pin  = 0x00090005;
+TraceD3_Pin  = 0x00090006;
+
+// <<< end of configuration section >>>
